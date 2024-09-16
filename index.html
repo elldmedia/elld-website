@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eLLD</title>
+    <link rel="stylesheet" href="styles.css">
+	 <link rel="icon" href="images/logo-white.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="eLLD Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">בית</a></li>
+                    <li><a href="#services">השירותים שלנו</a></li>
+                    <li><a href="#about">אודות</a></li>
+                    <li><a href="#contact">צור קשר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>סטודיו eLLD</h1>
+                <p>הפקות מדיה בבינה מלאכותית</p>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>השירותים שלנו</h2>
+            <div class="services-container">
+                <div class="service">
+                    <img src="images/voice-cloning.jpg" alt="שכפול קולי">
+                    <h3>שכפול קולי</h3>
+                    <p>שכפול קולי מדויק המבוסס על דגימות קוליות קיימות</p>
+                </div>
+                <div class="service">
+                    <img src="images/animated-avatar.jpg" alt="יצירת אווטאר מונפש מתמונה">
+                    <h3>יצירת אווטאר מונפש מתמונה</h3>
+                    <p>הפיכת תמונות לאווטארים מונפשים מרשימים</p>
+                </div>
+                <div class="service">
+                    <img src="images/song-recording.jpg" alt="הקלטת שירים מקצועית">
+                    <h3>הפקה מקצועית של קאברים / שירים מקוריים באמצעות בינה מלאכותית</h3>
+                     <p>כל אחד יכול להיות זמר - הפקה מקצועית של קאבר / שיר מקורי בקול שלך</p>
+                </div>
+                <div class="service">
+                    <img src="images/greeting-recording.jpg" alt="הקלטת ברכות">
+                    <h3>הקלטת ברכות</h3>
+                    <p>הקלטת ברכות לכל אירוע בכל קול לבחירה (גם קולות של יקירים / דמויות מהעבר שכבר לא בחיים)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>אודות</h2>
+            <p> סטודיו eLLD הוקם על מנת להנגיש שירותי בינה מלאכותית מתקדמים בתחום הפקות המדיה.</p>
+			<p>אנחנו מספקים שירותים מותאמים אישית לכל לקוח.</p>
+        </section>
+
+        <section id="contact">
+            <h2>צור קשר</h2>
+			   <a href="tel:+972555071731" class="phone-link">055-5071731</a>
+			<div class="social-icons">
+            <a href="https://wa.me/972555071731?text=שלום,%20אני%20מעוניין%20במידע%20בנוגע%20לשירותים%20שלכם" target="_blank" title="WhatsApp">
+                <img src="icons/icon_whatsapp.png">
+            </a>
+            <a href="https://www.facebook.com/elldmedia" target="_blank" title="Facebook">
+                <img src="icons/icon_facebook.png">
+            </a>
+            <a href="https://www.instagram.com/elldmedia" target="_blank" title="Instagram">
+                <img src="icons/icon_instagram.png">
+            </a>
+            <a href="https://www.tiktok.com/@elldmedia" target="_blank" title="TikTok">
+                <img src="icons/icon_tiktok.png">
+            </a>
+        </div>
+            <form id="contact-form">
+                <label for="name">שם:</label>
+                <input type="text" id="name" name="from_name" required>
+                
+                <label for="email">אימייל:</label>
+                <input type="email" id="email" name="from_email" required>
+                
+                <label for="message">הודעה:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">שלח</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 eLLD. כל הזכויות שמורות.</p>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

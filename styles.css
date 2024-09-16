@@ -1,0 +1,264 @@
+/* הגדרות כלליות */
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 10px;
+	
+}
+
+header {
+    background-size: cover;
+    background-position: center;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: padding 0.3s ease;
+	text-align: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	text-align: center;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+header.scroll-down {
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ff6347;
+}
+
+.hero-section {
+    background-image: url('images/home-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.hero-section .hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+main {
+    padding: 20px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+section {
+    padding: 60px 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#services {
+    background-color: #eef2f3;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    flex: 1 1 calc(33% - 40px);
+    min-width: 250px;
+}
+
+.service img {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ff6347;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service {
+        flex: 1 1 100%;
+        max-width: 20%;
+		
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.phone-link {
+    text-decoration: none;
+    color: #007bff; /* צבע הטקסט */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.phone-link:hover {
+    color: #0056b3; /* צבע הטקסט בעת מעבר עכבר */
+}
+
+@media (max-width: 768px) {
+    .phone-link {
+        font-size: 18px; /* גודל גופן גדול יותר במכשירים ניידים */
+    }
+}
+
+
+.social-icons {
+            display: flex;
+            justify-content: center; /* מרכז את האייקונים */
+            gap: 10px;
+            flex-wrap: wrap; /* מאפשר לאייקונים לעבור לשורה הבאה אם יש צורך */
+            padding: 10px;
+        }
+        .social-icons a {
+            display: block;
+            text-decoration: none;
+        }
+        .social-icons img {
+            width: 40px; /* גודל האייקונים בדסקטופ */
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+        @media (max-width: 600px) {
+            .social-icons img {
+                width: 30px; /* גודל האייקונים במובייל */
+                height: 30px;
+            }
+        }
+		
+		.phone-number (
+            
+          text-align: center;
+			
+			
+			)
